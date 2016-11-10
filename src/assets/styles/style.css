@@ -1,123 +1,30 @@
-* {
-	margin: 0;
-	padding: 0;
+.star-rating{
+	font-size: 0;
 }
-
-clearfix:before,
- .clearfix:after {
- 	content: " ";
- 	display: table;
- }
- 
- .clearfix:after {
- 	clear: both;
- }
- 
- .star {
- 	position: relative;
- 	list-style: none;
- 	width: 230px;
- 	height: 18px;
- 	background: url("/src/assets/img/rating-star.png");
- }
- 
- .star li {
- 	float: left;
- 	height: 17px;
-     z-index: 1;
- }
- 
- .star li span[class*="star"] {
- 	position: absolute;
- 	z-index: 5;
- 	display: inline-block;
- 	width: 23px;
- 	height: 18px;
- 	cursor: pointer;
- }
- 
- .star li span[class*="star"]:hover {
- 	z-index: 2;
- 	left: 0;
- 	background: url("/src/assets/img/rating-star.png") left bottom;
- }
- 
- .star li span.star-rating__item1{
- 	left: 0;
- }
- 
- .star li span.star-rating__item1:hover {
- 	width: 23px;
- }
- 
- 
- .star li span.star-rating__item2{
- 	left: 23px;
- }
- 
- .star li span.star-rating__item2:hover {
- 	width: 46px;
- }
- 
- .star li span.star-rating__item3{
- 	left: 46px;
- }
- 
- .star li span.star-rating__item3:hover {
- 	width: 69px;
- }
- 
- .star li span.star-rating__item4{
- 	left: 69px;
+.star-rating__wrap{
+	display: inline-block;
+	font-size: 1rem;
 }
- 
- .star li span.star-rating__item4:hover {
- 	width: 92px;
- }
- 
- .star li span.star-rating__item5{
- 	left: 92px;
- }
- 
- .star li span.star-rating__item5:hover {
- 	width: 115px;
- }
- 
- .star li span.star-rating__item6{
- 	left: 115px;
- }
- 
- .star li span.star-rating__item6:hover {
- 	width: 138px;
- }
- 
- .star li span.star-rating__item7{
- 	left: 138px;
- }
- 
- .star li span.star-rating__item7:hover {
- 	width: 161px;
- }
- 
- .star li span.star-rating__item8{
- 	left: 161px;
- }
- 
- .star li span.star-rating__item8:hover {
- 	width: 184px;
- }
- 
- .star li span.star-rating__item9 {
- 	left: 184px;
- }
- 
- .star li span.star-rating__item9:hover {
- 	width: 207px;
- }
- 
- .star li span.star-rating__item10 {
- 	left: 207px;
-  }
-.star li span.star-rating__item10:hover {
- 	width: 230px
-  }
+.star-rating__wrap:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.star-rating__ico{
+	float: right;
+	padding-left: 2px;
+	cursor: pointer;
+	color: #FFB300;
+}
+.star-rating__ico:last-child{
+	padding-left: 0;
+}
+.star-rating__input{
+	display: none;
+}
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before
+{
+	content: "\f005";
+}
